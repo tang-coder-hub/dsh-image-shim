@@ -1,0 +1,12 @@
+- insert:
+    - id: image-shim
+      name: dsh-image-shim
+      config:
+        enabled: true
+        pythonPath: auto
+        port: 3089
+        probeIntervalSec: 30
+        probeTimeoutMs: 6000
+        failureThreshold: 2
+        startupGraceSec: 8
+        stopOnDispose: false

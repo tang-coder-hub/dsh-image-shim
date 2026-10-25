@@ -1,0 +1,47 @@
+{
+  "name": "dsh-image-shim",
+  "version": "1.0.0",
+  "description": "把本地图像去水印代理（image-shim.py，127.0.0.1:3089）挂在 DSH 宿主生命周期上：DSH 起它就在，掉了自动拉回来。",
+  "author": "tang-coder-hub <293740307+tang-coder-hub@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tang-coder-hub/dsh-image-shim.git"
+  },
+  "homepage": "https://github.com/tang-coder-hub/dsh-image-shim",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "image",
+    "watermark"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "image-shim.py",
+    "dewatermark.py",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.1-rc.2 <0.3.0",
+      "node": ">=20.18",
+      "profiles": [
+        "desktop"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20.18"
+  },
+  "license": "MIT"
+}
