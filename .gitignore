@@ -1,0 +1,11 @@
+# 运行时产物
+draws/
+__pycache__/
+*.pyc
+*.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
